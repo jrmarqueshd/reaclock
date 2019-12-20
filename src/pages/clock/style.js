@@ -136,7 +136,6 @@ export const PointerSecondsWrapper = styled.div`
 	position: absolute;
 	transform: ${props =>
 		props.seconds ? `rotate(${props.seconds * 6}deg)` : ""};
-	/* transform: rotate(60deg); */
 	width: 400px;
 
 	@media (max-width: 592px) {

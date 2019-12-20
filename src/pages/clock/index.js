@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
+import { api } from "../../services/api";
 
 import {
 	Wrapper,
@@ -11,11 +13,23 @@ import {
 } from "./style";
 
 export default function Clock() {
+	const [weather, setWeather] = useState({});
+
 	const [hours, setHours] = useState(0);
 
 	const [minutes, setMinutes] = useState(0);
 
 	const [seconds, setSeconds] = useState(0);
+
+	useEffect(() => {
+		async function receivedWeather() {
+			const response = await api.get();
+
+			setWeather(response.data.results);
+		}
+
+		receivedWeather();
+	}, []);
 
 	setInterval(() => {
 		setHours(new Date().getHours());
