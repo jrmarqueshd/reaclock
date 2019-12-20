@@ -23,6 +23,12 @@ export const BodyClock = styled.div`
 	position: relative;
 	width: 400px;
 
+	@media (max-width: 592px) {
+		border-width: 10px;
+		height: 200px;
+		width: 200px;
+	}
+
 	span {
 		background-color: rgb(178, 178, 178);
 		border-radius: 100%;
@@ -39,6 +45,22 @@ export const ClockNumbers = styled.div`
 	font-size: 3em;
 	position: absolute;
 	${props => (props.position ? `${props.position}10px` : "top: 0")};
+
+	@media (max-width: 592px) {
+		font-size: 1.5em;
+	}
+`;
+
+export const ClockSlashs = styled.div`
+	background-color: #333;
+	height: 30px;
+	position: absolute;
+	transform: ${props => (props.transform ? `${props.transform}` : "")};
+	width: 5px;
+
+	@media (max-width: 592px) {
+		display: none;
+	}
 `;
 
 export const PointerHoursWrapper = styled.div`
@@ -53,6 +75,11 @@ export const PointerHoursWrapper = styled.div`
 	width: 400px;
 	z-index: 999;
 
+	@media (max-width: 592px) {
+		height: 200px;
+		width: 200px;
+	}
+
 	span {
 		background-color: #000;
 		border-radius: 20px;
@@ -60,6 +87,11 @@ export const PointerHoursWrapper = styled.div`
 		height: 120px;
 		width: 10px;
 		margin-bottom: 120px;
+
+		@media (max-width: 592px) {
+			height: 50px;
+			margin-bottom: 50px;
+		}
 	}
 `;
 
@@ -75,6 +107,11 @@ export const PointerMinutesWrapper = styled.div`
 	transition: all 987ms ease-in-out;
 	width: 400px;
 
+	@media (max-width: 592px) {
+		height: 200px;
+		width: 200px;
+	}
+
 	span {
 		background-color: #000;
 		border-radius: 20px;
@@ -82,6 +119,11 @@ export const PointerMinutesWrapper = styled.div`
 		height: 170px;
 		margin-bottom: 170px;
 		width: 9px;
+
+		@media (max-width: 592px) {
+			height: 70px;
+			margin-bottom: 70px;
+		}
 	}
 `;
 
@@ -94,7 +136,13 @@ export const PointerSecondsWrapper = styled.div`
 	position: absolute;
 	transform: ${props =>
 		props.seconds ? `rotate(${props.seconds * 6}deg)` : ""};
+	/* transform: rotate(60deg); */
 	width: 400px;
+
+	@media (max-width: 592px) {
+		height: 200px;
+		width: 200px;
+	}
 
 	span {
 		background-color: #e61919;
@@ -103,5 +151,10 @@ export const PointerSecondsWrapper = styled.div`
 		height: 180px;
 		margin-bottom: 180px;
 		width: 5px;
+
+		@media (max-width: 592px) {
+			height: 80px;
+			margin-bottom: 80px;
+		}
 	}
 `;

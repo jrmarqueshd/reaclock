@@ -6,7 +6,8 @@ import {
 	PointerHoursWrapper,
 	PointerMinutesWrapper,
 	PointerSecondsWrapper,
-	ClockNumbers
+	ClockNumbers,
+	ClockSlashs
 } from "./style";
 
 export default function Clock() {
@@ -29,8 +30,50 @@ export default function Clock() {
 				<ClockNumbers position="right:">3</ClockNumbers>
 				<ClockNumbers position="bottom:">6</ClockNumbers>
 				<ClockNumbers position="left:">9</ClockNumbers>
+
+				<ClockSlashs
+					style={{ right: 107, top: 30 }}
+					transform="rotate(30deg)"
+				></ClockSlashs>
+
+				<ClockSlashs
+					style={{ right: 42, top: 96 }}
+					transform="rotate(60deg)"
+				></ClockSlashs>
+
+				<ClockSlashs
+					style={{ right: 42, bottom: 96 }}
+					transform="rotate(120deg)"
+				></ClockSlashs>
+
+				<ClockSlashs
+					style={{ right: 107, bottom: 30 }}
+					transform="rotate(150deg)"
+				></ClockSlashs>
+
+				<ClockSlashs
+					style={{ left: 107, bottom: 30 }}
+					transform="rotate(210deg)"
+				></ClockSlashs>
+
+				<ClockSlashs
+					style={{ left: 42, bottom: 96 }}
+					transform="rotate(240deg)"
+				></ClockSlashs>
+
+				<ClockSlashs
+					style={{ left: 107, top: 30 }}
+					transform="rotate(330deg)"
+				></ClockSlashs>
+
+				<ClockSlashs
+					style={{ left: 42, top: 96 }}
+					transform="rotate(300deg)"
+				></ClockSlashs>
+
 				<span></span>
-				<PointerHoursWrapper hours={hours}>
+
+				<PointerHoursWrapper hours={hours + minutes / 60}>
 					<span></span>
 				</PointerHoursWrapper>
 				<PointerMinutesWrapper minutes={minutes}>
