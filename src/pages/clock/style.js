@@ -1,159 +1,160 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-	background-color: #333333;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	margin: 0;
-	padding: 0;
-	width: 100%;
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 `;
 
 export const BodyClock = styled.div`
-	background-color: #6a6a6a;
-	border: 20px solid rgba(178, 178, 178, 0.7);
-	border-radius: 100%;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 400px;
-	position: relative;
-	width: 400px;
+    background-color: #6a6a6a;
+    border: 20px solid rgba(178, 178, 178, 0.7);
+    border-radius: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    position: relative;
+    width: 400px;
 
-	@media (max-width: 592px) {
-		border-width: 10px;
-		height: 200px;
-		width: 200px;
-	}
+    @media (max-width: 592px) {
+        border-width: 10px;
+        height: 200px;
+        width: 200px;
+    }
 
-	span {
-		background-color: rgb(178, 178, 178);
-		border-radius: 100%;
-		display: block;
-		height: 20px;
-		width: 20px;
-		z-index: 999999;
-	}
+    span {
+        background-color: rgb(178, 178, 178);
+        border-radius: 100%;
+        display: block;
+        height: 20px;
+        width: 20px;
+        z-index: 999999;
+    }
 `;
 
 export const ClockNumbers = styled.div`
-	color: #fff;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 3em;
-	position: absolute;
-	${props => (props.position ? `${props.position}10px` : "top: 0")};
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    position: absolute;
+    ${props => (props.position ? `${props.position}10px` : "top: 0")};
 
-	@media (max-width: 592px) {
-		font-size: 1.5em;
-	}
+    @media (max-width: 592px) {
+        font-size: 1.5em;
+    }
 `;
 
 export const ClockSlashs = styled.div`
-	background-color: #333;
-	height: 30px;
-	position: absolute;
-	transform: ${props => (props.transform ? `${props.transform}` : "")};
-	width: 5px;
+    background-color: #333;
+    height: 30px;
+    position: absolute;
+    transform: ${props => (props.transform ? `${props.transform}` : "")};
+    width: 5px;
 
-	@media (max-width: 592px) {
-		display: none;
-	}
+    @media (max-width: 592px) {
+        display: none;
+    }
 `;
 
 export const PointerHoursWrapper = styled.div`
-	border-radius: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 400px;
-	position: absolute;
-	transform: ${props => (props.hours ? `rotate(${props.hours * 30}deg)` : "")};
-	transition: all 987ms ease-in-out;
-	width: 400px;
-	z-index: 999;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    position: absolute;
+    transform: ${props =>
+        props.hours ? `rotate(${props.hours * 30}deg)` : ""};
+    transition: all 987ms ease-in-out;
+    width: 400px;
+    z-index: 999;
 
-	@media (max-width: 592px) {
-		height: 200px;
-		width: 200px;
-	}
+    @media (max-width: 592px) {
+        height: 200px;
+        width: 200px;
+    }
 
-	span {
-		background-color: #000;
-		border-radius: 20px;
-		display: block;
-		height: 120px;
-		width: 10px;
-		margin-bottom: 120px;
+    span {
+        background-color: #000;
+        border-radius: 20px;
+        display: block;
+        height: 120px;
+        width: 10px;
+        margin-bottom: 120px;
 
-		@media (max-width: 592px) {
-			height: 50px;
-			margin-bottom: 50px;
-		}
-	}
+        @media (max-width: 592px) {
+            height: 50px;
+            margin-bottom: 50px;
+        }
+    }
 `;
 
 export const PointerMinutesWrapper = styled.div`
-	border-radius: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
-	height: 400px;
-	transform: ${props =>
-		props.minutes ? `rotate(${props.minutes * 6}deg)` : ""};
-	transition: all 987ms ease-in-out;
-	width: 400px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 400px;
+    transform: ${props =>
+        props.minutes ? `rotate(${props.minutes * 6}deg)` : ""};
+    transition: all 987ms ease-in-out;
+    width: 400px;
 
-	@media (max-width: 592px) {
-		height: 200px;
-		width: 200px;
-	}
+    @media (max-width: 592px) {
+        height: 200px;
+        width: 200px;
+    }
 
-	span {
-		background-color: #000;
-		border-radius: 20px;
-		display: block;
-		height: 170px;
-		margin-bottom: 170px;
-		width: 9px;
+    span {
+        background-color: #000;
+        border-radius: 20px;
+        display: block;
+        height: 170px;
+        margin-bottom: 170px;
+        width: 9px;
 
-		@media (max-width: 592px) {
-			height: 70px;
-			margin-bottom: 70px;
-		}
-	}
+        @media (max-width: 592px) {
+            height: 70px;
+            margin-bottom: 70px;
+        }
+    }
 `;
 
 export const PointerSecondsWrapper = styled.div`
-	border-radius: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 400px;
-	position: absolute;
-	transform: ${props =>
-		props.seconds ? `rotate(${props.seconds * 6}deg)` : ""};
-	width: 400px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    position: absolute;
+    transform: ${props =>
+        props.seconds ? `rotate(${props.seconds * 6}deg)` : ""};
+    width: 400px;
 
-	@media (max-width: 592px) {
-		height: 200px;
-		width: 200px;
-	}
+    @media (max-width: 592px) {
+        height: 200px;
+        width: 200px;
+    }
 
-	span {
-		background-color: #e61919;
-		border-radius: 20px;
-		display: block;
-		height: 180px;
-		margin-bottom: 180px;
-		width: 5px;
+    span {
+        background-color: #e61919;
+        border-radius: 20px;
+        display: block;
+        height: 180px;
+        margin-bottom: 180px;
+        width: 5px;
 
-		@media (max-width: 592px) {
-			height: 80px;
-			margin-bottom: 80px;
-		}
-	}
+        @media (max-width: 592px) {
+            height: 80px;
+            margin-bottom: 80px;
+        }
+    }
 `;
